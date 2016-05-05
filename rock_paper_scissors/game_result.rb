@@ -19,16 +19,16 @@ class RockPaperScissors
 
     private
 
-    State = Struct.new(:player_hand, :winning_hand) do
+    State = Struct.new(:winning_hand) do
       def to_s
         name
       end
     end
 
     WINNING_HAND = {
-      'r' => State.new('rock', 's'),
-      'p' => State.new('paper', 'r'),
-      's' => State.new('scissors', 'p'),
+      'r' => State.new('s'),
+      'p' => State.new('r'),
+      's' => State.new('p'),
     }
   end
 end

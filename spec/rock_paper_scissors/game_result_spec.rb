@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'GameResult' do
-  describe "result when user plays 'r'" do
+  describe "check when user plays 'r'" do
     let(:player_hand) { 'r' }
 
     it "when compuer plays 'r'" do
