@@ -20,7 +20,7 @@ class RockPaperScissors
     display_beginning_message
     set_user_hand
 
-    play_startegy
+    play_strategy
 
     display_game_results
     display_game_summary
@@ -33,11 +33,10 @@ class RockPaperScissors
   private
 
   def display_game_results
-    puts GameResult.result[:message]
+    puts GameResult.message
   end
 
   def display_game_summary
-    PlayerRecord.record[GameResult.result[:outcome]] += 1
     puts "you won #{PlayerRecord.record[:win]} times. \nyou lost #{PlayerRecord.record[:lose]} times. \nwe tied #{PlayerRecord.record[:tie]} times."
   end
 
@@ -52,7 +51,7 @@ class RockPaperScissors
     player.favorite_hand
   end
 
-  def play_startegy
+  def play_strategy
     Strategies.list[@strategy].new(player: player).play
   end
 

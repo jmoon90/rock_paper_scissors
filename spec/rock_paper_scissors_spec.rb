@@ -9,13 +9,13 @@ describe RockPaperScissors do
       it 'plays RockPaperScissors::Strategies::Randomm if game_strategy is random' do
         rps = RockPaperScissors.new('last_move')
         expect(RockPaperScissors::Strategies::LastMove).to receive(:new).and_return(RockPaperScissors::Strategies::LastMove.new({player: player}))
-        rps.send(:play_startegy)
+        rps.send(:play_strategy)
       end
 
       it 'plays RockPaperScissors::Strategies.favorite if game_strategy is favorite' do
         rps = RockPaperScissors.new('favorite')
         expect(RockPaperScissors::Strategies::Favorite).to receive(:new).and_return(RockPaperScissors::Strategies::Favorite.new({player: player}))
-        rps.send(:play_startegy)
+        rps.send(:play_strategy)
       end
     end
   end
