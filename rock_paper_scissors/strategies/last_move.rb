@@ -1,12 +1,12 @@
 class RockPaperScissors
   class Strategies
     class LastMove
-      def initialize(player:)
+      def initialize(player)
         @player = player
       end
 
       def play
-        GameResult.check(player_hand: player.current_hand, computer_hand: computer_hand)
+        GameResult.check(player.current_hand, computer_hand)
       end
 
       private

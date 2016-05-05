@@ -1,13 +1,11 @@
-require 'byebug'
-
-require_relative 'rock_paper_scissors/strategies/favorite.rb'
-require_relative 'rock_paper_scissors/strategies/last_move.rb'
-require_relative 'rock_paper_scissors/strategies/randomm.rb'
-require_relative 'rock_paper_scissors/game_result.rb'
-require_relative 'rock_paper_scissors/player.rb'
-require_relative 'rock_paper_scissors/player_record.rb'
-require_relative 'rock_paper_scissors/strategies_lists.rb'
-require_relative 'rock_paper_scissors/random_hand.rb'
+require_relative 'rock_paper_scissors/strategies/favorite'
+require_relative 'rock_paper_scissors/strategies/last_move'
+require_relative 'rock_paper_scissors/strategies/randomm'
+require_relative 'rock_paper_scissors/game_result'
+require_relative 'rock_paper_scissors/player'
+require_relative 'rock_paper_scissors/player_record'
+require_relative 'rock_paper_scissors/strategies_lists'
+require_relative 'rock_paper_scissors/random_hand'
 
 class RockPaperScissors
   class RockPaperScissorsStrategyArgumentError < StandardError; end
@@ -46,7 +44,7 @@ class RockPaperScissors
   end
 
   def play_strategy
-    StrategiesLists.list[@strategy].new(player: player).play
+    StrategiesLists.list[@strategy].new(player).play
   end
 
   def display_game_results

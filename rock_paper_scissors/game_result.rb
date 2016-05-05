@@ -1,6 +1,6 @@
 class RockPaperScissors
   module GameResult
-    def self.check(player_hand:, computer_hand:)
+    def self.check(player_hand, computer_hand)
       if player_hand == computer_hand
         PlayerRecord.record[:tie] += 1
         @message = "Computer chose '#{computer_hand}'. It's a tie!"
