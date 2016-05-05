@@ -18,13 +18,5 @@ describe RockPaperScissors do
         rps.send(:play_startegy)
       end
     end
-
-    # it 'call on set_user_hand' do
-    #   rps = RockPaperScissors.new('last_move')
-    #   rps.send(:set_user_hand) = double()
-    #
-    #   rps.start_game
-    # end
-
   end
 end

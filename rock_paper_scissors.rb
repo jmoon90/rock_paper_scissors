@@ -12,7 +12,7 @@ class RockPaperScissors
   class RockPaperScissorsStrategyArgumentError < StandardError; end
   HANDS = ['r', 'p', 's']
   def initialize(strategy)
-    fail RockPaperScissorsStrategyArgumentError unless ['last_move', 'favorite', 'random', 'double_throw'].include?(strategy)
+    fail RockPaperScissorsStrategyArgumentError unless ['last_move', 'favorite'].include?(strategy)
     @strategy = strategy
   end
 
